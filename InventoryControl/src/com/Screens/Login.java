@@ -156,7 +156,9 @@ public class Login extends javax.swing.JFrame {
        
 
         if (status == true) {
-            JOptionPane.showMessageDialog(this, "Login sucsess");
+            MainScreen main = new MainScreen();
+            main.setVisible(true);
+            this.dispose();
         }else{
             JOptionPane.showMessageDialog(this, "Login Fail");
         }
