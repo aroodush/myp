@@ -65,7 +65,7 @@ public class addcus extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(0, 0, 153));
         jButton1.setText("Save");
         jPanel1.add(jButton1);
-        jButton1.setBounds(220, 470, 80, 30);
+        jButton1.setBounds(210, 470, 80, 30);
 
         jButton2.setBackground(new java.awt.Color(153, 0, 51));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
