@@ -48,6 +48,7 @@ public class Login extends javax.swing.JFrame {
         btnClear = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         image = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -57,13 +58,13 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel1.setText("Username");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 70, 20));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 70, 20));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel2.setText("Password");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, 70, 20));
-        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 160, -1));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 160, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 70, 20));
+        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 160, -1));
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 160, -1));
 
         btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/App-login-manager-icon.png"))); // NOI18N
         btnLogin.setText("Login");
@@ -72,11 +73,11 @@ public class Login extends javax.swing.JFrame {
                 btnLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 97, 33));
+        jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 97, 33));
 
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/Actions-edit-clear-icon.png"))); // NOI18N
         btnClear.setText("Clear");
-        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 97, 33));
+        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 97, 33));
 
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/Log Out_24x24.png"))); // NOI18N
         btnExit.setText("Exit");
@@ -85,7 +86,7 @@ public class Login extends javax.swing.JFrame {
                 btnExitActionPerformed(evt);
             }
         });
-        jPanel1.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 97, 33));
+        jPanel1.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 97, 33));
 
         image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/Login.png"))); // NOI18N
@@ -94,6 +95,11 @@ public class Login extends javax.swing.JFrame {
         image.setMinimumSize(new java.awt.Dimension(100, 100));
         image.setName(""); // NOI18N
         jPanel1.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 270));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Inventory Manager");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 350, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,6 +191,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel image;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtUsername;
