@@ -6,10 +6,12 @@
 package com.Screens;
 
 import com.Controller.LoginJpaController;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -147,9 +149,33 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExitMouseClicked
 
     private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
-        String username = txtUsername.getText();
-        String password = txtPassword.getText();
         
+        if("".equals(txtUsername.getText())){
+            JOptionPane.showMessageDialog(this, "Please Enter your Username");
+            return;
+        }else if("".equals(txtPassword.getText())){
+            JOptionPane.showMessageDialog(this, "Please Enter your Password");
+            return;
+        }
+        
+        List<com.Entity.Login> log = login.findLoginEntities();
+        boolean status = false;
+        for(com.Entity.Login logi : log){
+            if(logi.getUsername().equals(txtUsername.getText()) && logi.getPassword().equals(txtPassword.getText())){
+                status = true;
+                break;
+            }
+        }
+        
+        if(status){
+            MainScreen mainScreen = new MainScreen();
+            mainScreen.setVisible(true);
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(this, "Login Fail, Please Chek your username and password");
+            txtPassword.setText(null);
+            txtUsername.setText(null);
+        }
     }//GEN-LAST:event_btnLoginMouseClicked
 
     /**
