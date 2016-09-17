@@ -40,7 +40,7 @@ public class CustomerMasterJpaController implements Serializable {
             em.persist(customerMaster);
             em.getTransaction().commit();
         } catch (Exception ex) {
-            if (findCustomerMaster(customerMaster.getCusId()) != null) {
+            if (findCustomerMaster(customerMaster.getNic()) != null) {
                 throw new PreexistingEntityException("CustomerMaster " + customerMaster + " already exists.", ex);
             }
             throw ex;
@@ -114,6 +114,15 @@ public class CustomerMasterJpaController implements Serializable {
                 q.setFirstResult(firstResult);
             }
             return q.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+    
+    public CustomerMaster findCustomerMaster(String nic){
+        EntityManager em = getEntityManager();
+        try {
+            return em.find(CustomerMaster.class, nic);
         } finally {
             em.close();
         }

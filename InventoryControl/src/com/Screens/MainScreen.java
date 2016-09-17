@@ -57,7 +57,7 @@ public class MainScreen extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/report.png"))); // NOI18N
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(240, 130, 210, 140);
+        jLabel7.setBounds(240, 130, 140, 140);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/Payment.png"))); // NOI18N
         jPanel2.add(jLabel6);
