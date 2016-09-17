@@ -5,28 +5,16 @@
  */
 package com.Screens;
 
-import com.Controller.LoginJpaController;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.swing.JOptionPane;
-
 /**
  *
- * @author Lahiru
+ * @author Geeth
  */
 public class Login extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-    protected EntityManagerFactory em;
-    protected LoginJpaController lj;
-
     public Login() {
-        em = Persistence.createEntityManagerFactory("InventoryControlPU");
-        lj = new LoginJpaController(em);
         initComponents();
     }
 
@@ -39,115 +27,90 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
-        btnLogin = new javax.swing.JButton();
-        btnClear = new javax.swing.JButton();
-        btnExit = new javax.swing.JButton();
-        image = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Login");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Login"));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel1.setText("Username");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 70, 20));
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Login");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(240, 20, 310, 50);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel2.setText("Password");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 70, 20));
-        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 160, -1));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 160, -1));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/ffff.png"))); // NOI18N
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(220, 70, 260, 20);
 
-        btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/App-login-manager-icon.png"))); // NOI18N
-        btnLogin.setText("Login");
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/ds.png"))); // NOI18N
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(500, 10, 130, 60);
+
+        jLabel6.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("User Name");
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(220, 120, 120, 50);
+
+        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Password");
+        jPanel2.add(jLabel7);
+        jLabel7.setBounds(220, 180, 150, 50);
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
+                jTextField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 97, 33));
+        jPanel2.add(jTextField1);
+        jTextField1.setBounds(350, 130, 220, 30);
+        jPanel2.add(jTextField2);
+        jTextField2.setBounds(350, 190, 220, 30);
 
-        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/Actions-edit-clear-icon.png"))); // NOI18N
-        btnClear.setText("Clear");
-        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 97, 33));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/Login.png"))); // NOI18N
+        jPanel2.add(jLabel8);
+        jLabel8.setBounds(-20, 30, 280, 250);
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(250, 280, 0, 0);
 
-        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/Log Out_24x24.png"))); // NOI18N
-        btnExit.setText("Exit");
-        btnExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExitActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 97, 33));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/login_button.png"))); // NOI18N
+        jPanel2.add(jLabel9);
+        jLabel9.setBounds(390, 250, 160, 40);
 
-        image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/Login.png"))); // NOI18N
-        image.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        image.setMaximumSize(new java.awt.Dimension(100, 100));
-        image.setMinimumSize(new java.awt.Dimension(100, 100));
-        image.setName(""); // NOI18N
-        jPanel1.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 270));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Inventory Manager");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 350, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/loginsrc.png"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(0, 0, 640, 350);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 269, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    boolean status = false;
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-
-        List<com.Entity.Login> loginList = lj.findLoginEntities();
-        for (com.Entity.Login log : loginList) {
-            
-            if (txtPassword.getText().equals(log.getPassword()) && txtUsername.getText().equals(log.getUsername())) {
-                status = true;
-            }
-
-        }
-       
-
-        if (status == true) {
-            MainScreen main = new MainScreen();
-            main.setVisible(true);
-            this.dispose();
-        }else{
-            JOptionPane.showMessageDialog(this, "Login Fail");
-        }
-
-    }//GEN-LAST:event_btnLoginActionPerformed
-
-    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnExitActionPerformed
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,15 +148,17 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnClear;
-    private javax.swing.JButton btnExit;
-    private javax.swing.JButton btnLogin;
-    private javax.swing.JLabel image;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtPassword;
-    private javax.swing.JTextField txtUsername;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
