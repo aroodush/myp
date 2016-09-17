@@ -49,10 +49,10 @@ public class CustomerRegister extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,15 +63,15 @@ public class CustomerRegister extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 102));
         jLabel2.setText("Customer Register");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(130, 40, 350, 40);
+        jLabel2.setBounds(90, 40, 350, 40);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/face.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(30, 20, 80, 80);
+        jLabel3.setBounds(10, 20, 80, 80);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/ffff.png"))); // NOI18N
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(120, 80, 360, 14);
+        jLabel5.setBounds(90, 80, 360, 14);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -150,32 +150,31 @@ public class CustomerRegister extends javax.swing.JFrame {
         jPanel1.add(jTextField8);
         jTextField8.setBounds(130, 120, 270, 30);
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/clear.png"))); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/ds.png"))); // NOI18N
+        jPanel1.add(jLabel18);
+        jLabel18.setBounds(430, 10, 140, 60);
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/save_button.png"))); // NOI18N
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(330, 580, 90, 80);
+        jLabel14.setBounds(150, 610, 120, 40);
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/close.png"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/clear_button.png"))); // NOI18N
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(420, 580, 90, 80);
+        jLabel15.setBounds(280, 610, 120, 40);
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/submit.png"))); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/exit_button.png"))); // NOI18N
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(230, 580, 100, 80);
-
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/sa.png"))); // NOI18N
-        jLabel17.setText("jLabel17");
-        jPanel1.add(jLabel17);
-        jLabel17.setBounds(410, 170, 230, 110);
+        jLabel16.setBounds(410, 610, 120, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/register.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 660, 700);
+        jLabel1.setBounds(0, 0, 580, 700);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 651, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,7 +230,7 @@ public class CustomerRegister extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
