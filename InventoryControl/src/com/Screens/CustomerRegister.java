@@ -53,6 +53,10 @@ public class CustomerRegister extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -156,19 +160,35 @@ public class CustomerRegister extends javax.swing.JFrame {
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/save_button.png"))); // NOI18N
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(150, 610, 120, 40);
+        jLabel14.setBounds(130, 680, 120, 40);
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/clear_button.png"))); // NOI18N
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(280, 610, 120, 40);
+        jLabel15.setBounds(260, 680, 120, 40);
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/exit_button.png"))); // NOI18N
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(410, 610, 120, 40);
+        jLabel16.setBounds(390, 680, 120, 40);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("NIC");
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(40, 544, 90, 40);
+        jPanel1.add(jTextField9);
+        jTextField9.setBounds(130, 550, 270, 30);
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("Fax");
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(40, 604, 100, 40);
+        jPanel1.add(jTextField10);
+        jTextField10.setBounds(130, 610, 270, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/register.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 580, 700);
+        jLabel1.setBounds(0, 0, 590, 750);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -178,7 +198,7 @@ public class CustomerRegister extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 693, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
         );
 
         pack();
@@ -230,7 +250,9 @@ public class CustomerRegister extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -241,6 +263,7 @@ public class CustomerRegister extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
@@ -248,5 +271,6 @@ public class CustomerRegister extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
