@@ -5,6 +5,12 @@
  */
 package com.Screens;
 
+import com.Controller.LoginJpaController;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 /**
  *
  * @author Geeth
@@ -14,8 +20,13 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    EntityManagerFactory emf;
+    LoginJpaController login;
     public Login() {
+        emf = Persistence.createEntityManagerFactory("InventoryControlPU");
+        login = new LoginJpaController(emf);
         initComponents();
+        
     }
 
     /**
@@ -33,12 +44,12 @@ public class Login extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        txtUsername = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
         jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        btnLogin = new javax.swing.JLabel();
+        btnExit = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,15 +82,15 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(jLabel7);
         jLabel7.setBounds(220, 180, 150, 50);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtUsernameActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField1);
-        jTextField1.setBounds(350, 130, 220, 30);
-        jPanel2.add(jTextField2);
-        jTextField2.setBounds(350, 190, 220, 30);
+        jPanel2.add(txtUsername);
+        txtUsername.setBounds(350, 130, 220, 30);
+        jPanel2.add(txtPassword);
+        txtPassword.setBounds(350, 190, 220, 30);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/Login.png"))); // NOI18N
         jPanel2.add(jLabel8);
@@ -87,13 +98,25 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(jLabel3);
         jLabel3.setBounds(250, 280, 0, 0);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/login_button.png"))); // NOI18N
-        jPanel2.add(jLabel9);
-        jLabel9.setBounds(330, 250, 160, 40);
+        btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/login_button.png"))); // NOI18N
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLoginMouseClicked(evt);
+            }
+        });
+        jPanel2.add(btnLogin);
+        btnLogin.setBounds(330, 250, 120, 40);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/exit_button.png"))); // NOI18N
-        jPanel2.add(jLabel10);
-        jLabel10.setBounds(460, 250, 120, 40);
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/exit_button.png"))); // NOI18N
+        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnExitMouseClicked(evt);
+            }
+        });
+        jPanel2.add(btnExit);
+        btnExit.setBounds(460, 250, 120, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/loginsrc.png"))); // NOI18N
         jPanel2.add(jLabel2);
@@ -114,9 +137,20 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtUsernameActionPerformed
+
+    private void btnExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_btnExitMouseClicked
+
+    private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
+        String username = txtUsername.getText();
+        String password = txtPassword.getText();
+        
+    }//GEN-LAST:event_btnLoginMouseClicked
 
     /**
      * @param args the command line arguments
@@ -154,8 +188,9 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btnExit;
+    private javax.swing.JLabel btnLogin;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -163,9 +198,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }
