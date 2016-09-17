@@ -38,6 +38,7 @@ public class Login extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -88,7 +89,11 @@ public class Login extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/login_button.png"))); // NOI18N
         jPanel2.add(jLabel9);
-        jLabel9.setBounds(390, 250, 160, 40);
+        jLabel9.setBounds(330, 250, 160, 40);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/exit_button.png"))); // NOI18N
+        jPanel2.add(jLabel10);
+        jLabel10.setBounds(460, 250, 120, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/loginsrc.png"))); // NOI18N
         jPanel2.add(jLabel2);
@@ -149,6 +154,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
