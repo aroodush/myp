@@ -5,6 +5,7 @@
  */
 package com.Screens;
 
+import com.Common.DatabaseConnection;
 import com.Controller.LoginJpaController;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +22,10 @@ public class Login extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
-     */
-    EntityManagerFactory emf;
+     */    
     LoginJpaController login;
-    public Login() {
-        emf = Persistence.createEntityManagerFactory("InventoryControlPU");
-        login = new LoginJpaController(emf);
+    public Login() {       
+        login = new LoginJpaController(DatabaseConnection.getEntityManagerFactory());
         initComponents();
         
     }

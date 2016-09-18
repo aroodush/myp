@@ -5,7 +5,11 @@
  */
 package com.Screens;
 
-import com.Controller.CustomerMasterJpaController;
+import com.Common.DatabaseConnection;
+import com.Controller.CustomermasterJpaController;
+import com.Entity.Customermaster;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.swing.JOptionPane;
@@ -19,14 +23,13 @@ public class CustomerRegister extends javax.swing.JFrame {
     /**
      * Creates new form CustomerRegistration
      */
-    EntityManagerFactory emf;
-    CustomerMasterJpaController cusjpa;
-    public CustomerRegister() {
-        emf = Persistence.createEntityManagerFactory("InventoryControlPU");
-        cusjpa = new CustomerMasterJpaController(emf);
-        //int no = cusjpa.getCustomerMasterCount()+1;        
-        //txtCustomerID.setText(String.valueOf(no));
+    
+    CustomermasterJpaController cusjpa;
+    public CustomerRegister() {        
+        cusjpa = new CustomermasterJpaController(DatabaseConnection.getEntityManagerFactory());        
         initComponents();
+        int no = cusjpa.getCustomermasterCount()+1;        
+        txtCustomerID.setText(String.valueOf(no));
     }
 
     /**
@@ -243,6 +246,27 @@ public class CustomerRegister extends javax.swing.JFrame {
         }else if("".equals(txtCity.getText()) || "".equals(txtNo.getText()) || "".equals(txtStreet.getText())){
             JOptionPane.showMessageDialog(this, "Address Field Requird");
             return;
+        }
+        
+         Customermaster cus = new Customermaster();
+         cus.setCusid(Integer.parseInt(txtCustomerID.getText()));
+         cus.setTitle(cmbTitle.getSelectedItem().toString());
+         cus.setFname(txtFname.getText());
+         cus.setMname(txtMName.getText());
+         cus.setLname(txtLname.getText());
+         cus.setAddreslane1(txtNo.getText());
+         cus.setAddresslane2(txtStreet.getText());
+         cus.setAddresslane3(txtCity.getText());
+         cus.setNic(txtNic.getText());
+         cus.setCusMobile(Integer.parseInt(txtMobile.getText()));
+         cus.setCusfax(Integer.parseInt(txtFax.getText()));
+         
+        try {
+            cusjpa.create(cus);
+            JOptionPane.showMessageDialog(this, "Customer Registration Successful!");
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Oops!, Customer Registration Fail");
+            Logger.getLogger(CustomerRegister.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnSaveMouseClicked
 
