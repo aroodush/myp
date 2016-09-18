@@ -68,7 +68,7 @@ public class AddReport extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(50, 150, 70, 30);
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(120, 150, 140, 30);
+        jTextField1.setBounds(120, 150, 150, 30);
 
         jLabel7.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
