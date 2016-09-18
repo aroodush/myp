@@ -68,15 +68,15 @@ public class AddReport extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(50, 150, 70, 30);
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(120, 150, 150, 30);
+        jTextField1.setBounds(120, 150, 180, 30);
 
         jLabel7.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("To");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(280, 140, 120, 50);
+        jLabel7.setBounds(310, 140, 40, 50);
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(320, 150, 190, 30);
+        jTextField2.setBounds(360, 150, 190, 30);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/generate_button.png"))); // NOI18N
         jPanel1.add(jLabel8);
