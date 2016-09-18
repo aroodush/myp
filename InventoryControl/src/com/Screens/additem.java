@@ -9,12 +9,12 @@ package com.Screens;
  *
  * @author Geeth
  */
-public class AddReport extends javax.swing.JFrame {
+public class additem extends javax.swing.JFrame {
 
     /**
-     * Creates new form AddReport
+     * Creates new form additem
      */
-    public AddReport() {
+    public additem() {
         initComponents();
     }
 
@@ -30,80 +30,111 @@ public class AddReport extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtFromDate = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Stock Report");
 
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Reports");
+        jLabel2.setText("Add Item");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(130, 20, 310, 50);
+        jLabel2.setBounds(160, 40, 200, 50);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/ds.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(460, 10, 130, 60);
+        jLabel3.setBounds(340, 10, 190, 70);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/item.png"))); // NOI18N
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(50, 30, 90, 90);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/ffff.png"))); // NOI18N
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(130, 60, 170, 10);
+        jLabel4.setBounds(160, 73, 150, 20);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/upClick.png"))); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Item Code");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(40, 10, 110, 90);
+        jLabel6.setBounds(50, 160, 100, 30);
 
-        jLabel5.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("From");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(50, 150, 70, 30);
-        jPanel1.add(txtFromDate);
-        txtFromDate.setBounds(120, 150, 180, 30);
+        jTextField1.setEditable(false);
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(140, 160, 240, 30);
 
-        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("To");
+        jLabel7.setText("Item Name");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(310, 140, 40, 50);
+        jLabel7.setBounds(50, 210, 100, 30);
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(360, 150, 190, 30);
+        jTextField2.setBounds(140, 210, 240, 30);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/generate_button.png"))); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Weight");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(420, 220, 120, 50);
+        jLabel8.setBounds(50, 270, 100, 30);
+        jPanel1.add(jTextField3);
+        jTextField3.setBounds(140, 270, 240, 30);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/exit_button.png"))); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Description");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(280, 210, 120, 70);
+        jLabel9.setBounds(50, 330, 90, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/reportScreen.png"))); // NOI18N
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(140, 340, 240, 120);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/save_button.png"))); // NOI18N
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(50, 510, 120, 40);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/clear_button.png"))); // NOI18N
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(180, 510, 130, 40);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/exit_button.png"))); // NOI18N
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(310, 500, 130, 60);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com.Images/additem.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(3, 0, 602, 328);
+        jLabel1.setBounds(0, 0, 490, 590);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 515, Short.MAX_VALUE)
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -123,26 +154,29 @@ public class AddReport extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddReport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(additem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddReport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(additem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddReport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(additem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddReport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(additem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddReport().setVisible(true);
+                new additem().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -152,7 +186,10 @@ public class AddReport extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField txtFromDate;
+    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
